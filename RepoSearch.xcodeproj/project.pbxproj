@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93110CED2B2D70710077AEAB /* RepoSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110CEC2B2D70710077AEAB /* RepoSearchApp.swift */; };
+		93110CEF2B2D70710077AEAB /* RepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110CEE2B2D70710077AEAB /* RepoListView.swift */; };
+		93110CF12B2D70740077AEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93110CF02B2D70740077AEAB /* Assets.xcassets */; };
+		93110CF42B2D70740077AEAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93110CF32B2D70740077AEAB /* Preview Assets.xcassets */; };
+		93110CFE2B2D70750077AEAB /* RepoSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110CFD2B2D70750077AEAB /* RepoSearchTests.swift */; };
+		93110D082B2D70750077AEAB /* RepoSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D072B2D70750077AEAB /* RepoSearchUITests.swift */; };
+		93110D0A2B2D70750077AEAB /* RepoSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D092B2D70750077AEAB /* RepoSearchUITestsLaunchTests.swift */; };
+		93110D192B2DA44C0077AEAB /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D182B2DA44C0077AEAB /* RepoListViewModel.swift */; };
+		93110D1B2B2DA4770077AEAB /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D1A2B2DA4770077AEAB /* RepoModel.swift */; };
+		93110D1D2B2DA4970077AEAB /* RepoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D1C2B2DA4970077AEAB /* RepoDetailsView.swift */; };
+		93110D232B2DEC340077AEAB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D222B2DEC340077AEAB /* APIClient.swift */; };
+		93110D252B2DECED0077AEAB /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D242B2DECED0077AEAB /* RequestFactory.swift */; };
+		93110D272B2DEE290077AEAB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D262B2DEE290077AEAB /* NetworkService.swift */; };
+		93110D292B2DFEDD0077AEAB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D282B2DFEDD0077AEAB /* NetworkRequest.swift */; };
+		93110D2B2B2E05B90077AEAB /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D2A2B2E05B90077AEAB /* APIHandler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93110CFA2B2D70750077AEAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93110CE12B2D70710077AEAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93110CE82B2D70710077AEAB;
+			remoteInfo = RepoSearch;
+		};
+		93110D042B2D70750077AEAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93110CE12B2D70710077AEAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93110CE82B2D70710077AEAB;
+			remoteInfo = RepoSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		93110CE92B2D70710077AEAB /* RepoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93110CEC2B2D70710077AEAB /* RepoSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchApp.swift; sourceTree = "<group>"; };
+		93110CEE2B2D70710077AEAB /* RepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListView.swift; sourceTree = "<group>"; };
+		93110CF02B2D70740077AEAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93110CF32B2D70740077AEAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93110CF92B2D70750077AEAB /* RepoSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93110CFD2B2D70750077AEAB /* RepoSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchTests.swift; sourceTree = "<group>"; };
+		93110D032B2D70750077AEAB /* RepoSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93110D072B2D70750077AEAB /* RepoSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchUITests.swift; sourceTree = "<group>"; };
+		93110D092B2D70750077AEAB /* RepoSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93110D182B2DA44C0077AEAB /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
+		93110D1A2B2DA4770077AEAB /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
+		93110D1C2B2DA4970077AEAB /* RepoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsView.swift; sourceTree = "<group>"; };
+		93110D222B2DEC340077AEAB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		93110D242B2DECED0077AEAB /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		93110D262B2DEE290077AEAB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		93110D282B2DFEDD0077AEAB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		93110D2A2B2E05B90077AEAB /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93110CE62B2D70710077AEAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93110CF62B2D70750077AEAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93110D002B2D70750077AEAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93110CE02B2D70710077AEAB = {
+			isa = PBXGroup;
+			children = (
+				93110CEB2B2D70710077AEAB /* RepoSearch */,
+				93110CFC2B2D70750077AEAB /* RepoSearchTests */,
+				93110D062B2D70750077AEAB /* RepoSearchUITests */,
+				93110CEA2B2D70710077AEAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93110CEA2B2D70710077AEAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93110CE92B2D70710077AEAB /* RepoSearch.app */,
+				93110CF92B2D70750077AEAB /* RepoSearchTests.xctest */,
+				93110D032B2D70750077AEAB /* RepoSearchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93110CEB2B2D70710077AEAB /* RepoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				93110D212B2DEB990077AEAB /* NetworkService */,
+				93110CEC2B2D70710077AEAB /* RepoSearchApp.swift */,
+				93110D1E2B2DEB6B0077AEAB /* View */,
+				93110D1F2B2DEB7E0077AEAB /* ViewModel */,
+				93110D202B2DEB8B0077AEAB /* Model */,
+				93110CF22B2D70740077AEAB /* Preview Content */,
+				93110D172B2D8ECC0077AEAB /* Resources */,
+			);
+			path = RepoSearch;
+			sourceTree = "<group>";
+		};
+		93110CF22B2D70740077AEAB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				93110CF32B2D70740077AEAB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93110CFC2B2D70750077AEAB /* RepoSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				93110CFD2B2D70750077AEAB /* RepoSearchTests.swift */,
+			);
+			path = RepoSearchTests;
+			sourceTree = "<group>";
+		};
+		93110D062B2D70750077AEAB /* RepoSearchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				93110D072B2D70750077AEAB /* RepoSearchUITests.swift */,
+				93110D092B2D70750077AEAB /* RepoSearchUITestsLaunchTests.swift */,
+			);
+			path = RepoSearchUITests;
+			sourceTree = "<group>";
+		};
+		93110D172B2D8ECC0077AEAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93110CF02B2D70740077AEAB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		93110D1E2B2DEB6B0077AEAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93110CEE2B2D70710077AEAB /* RepoListView.swift */,
+				93110D1C2B2DA4970077AEAB /* RepoDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93110D1F2B2DEB7E0077AEAB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				93110D182B2DA44C0077AEAB /* RepoListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93110D202B2DEB8B0077AEAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93110D1A2B2DA4770077AEAB /* RepoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93110D212B2DEB990077AEAB /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				93110D222B2DEC340077AEAB /* APIClient.swift */,
+				93110D2A2B2E05B90077AEAB /* APIHandler.swift */,
+				93110D282B2DFEDD0077AEAB /* NetworkRequest.swift */,
+				93110D242B2DECED0077AEAB /* RequestFactory.swift */,
+				93110D262B2DEE290077AEAB /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93110CE82B2D70710077AEAB /* RepoSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93110D0D2B2D70750077AEAB /* Build configuration list for PBXNativeTarget "RepoSearch" */;
+			buildPhases = (
+				93110CE52B2D70710077AEAB /* Sources */,
+				93110CE62B2D70710077AEAB /* Frameworks */,
+				93110CE72B2D70710077AEAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RepoSearch;
+			productName = RepoSearch;
+			productReference = 93110CE92B2D70710077AEAB /* RepoSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93110CF82B2D70750077AEAB /* RepoSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93110D102B2D70750077AEAB /* Build configuration list for PBXNativeTarget "RepoSearchTests" */;
+			buildPhases = (
+				93110CF52B2D70750077AEAB /* Sources */,
+				93110CF62B2D70750077AEAB /* Frameworks */,
+				93110CF72B2D70750077AEAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93110CFB2B2D70750077AEAB /* PBXTargetDependency */,
+			);
+			name = RepoSearchTests;
+			productName = RepoSearchTests;
+			productReference = 93110CF92B2D70750077AEAB /* RepoSearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		93110D022B2D70750077AEAB /* RepoSearchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93110D132B2D70750077AEAB /* Build configuration list for PBXNativeTarget "RepoSearchUITests" */;
+			buildPhases = (
+				93110CFF2B2D70750077AEAB /* Sources */,
+				93110D002B2D70750077AEAB /* Frameworks */,
+				93110D012B2D70750077AEAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93110D052B2D70750077AEAB /* PBXTargetDependency */,
+			);
+			name = RepoSearchUITests;
+			productName = RepoSearchUITests;
+			productReference = 93110D032B2D70750077AEAB /* RepoSearchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93110CE12B2D70710077AEAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					93110CE82B2D70710077AEAB = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					93110CF82B2D70750077AEAB = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 93110CE82B2D70710077AEAB;
+					};
+					93110D022B2D70750077AEAB = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 93110CE82B2D70710077AEAB;
+					};
+				};
+			};
+			buildConfigurationList = 93110CE42B2D70710077AEAB /* Build configuration list for PBXProject "RepoSearch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93110CE02B2D70710077AEAB;
+			productRefGroup = 93110CEA2B2D70710077AEAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93110CE82B2D70710077AEAB /* RepoSearch */,
+				93110CF82B2D70750077AEAB /* RepoSearchTests */,
+				93110D022B2D70750077AEAB /* RepoSearchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93110CE72B2D70710077AEAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93110CF42B2D70740077AEAB /* Preview Assets.xcassets in Resources */,
+				93110CF12B2D70740077AEAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93110CF72B2D70750077AEAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93110D012B2D70750077AEAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93110CE52B2D70710077AEAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93110D252B2DECED0077AEAB /* RequestFactory.swift in Sources */,
+				93110CEF2B2D70710077AEAB /* RepoListView.swift in Sources */,
+				93110D272B2DEE290077AEAB /* NetworkService.swift in Sources */,
+				93110D1B2B2DA4770077AEAB /* RepoModel.swift in Sources */,
+				93110CED2B2D70710077AEAB /* RepoSearchApp.swift in Sources */,
+				93110D192B2DA44C0077AEAB /* RepoListViewModel.swift in Sources */,
+				93110D1D2B2DA4970077AEAB /* RepoDetailsView.swift in Sources */,
+				93110D2B2B2E05B90077AEAB /* APIHandler.swift in Sources */,
+				93110D292B2DFEDD0077AEAB /* NetworkRequest.swift in Sources */,
+				93110D232B2DEC340077AEAB /* APIClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93110CF52B2D70750077AEAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93110CFE2B2D70750077AEAB /* RepoSearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93110CFF2B2D70750077AEAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93110D0A2B2D70750077AEAB /* RepoSearchUITestsLaunchTests.swift in Sources */,
+				93110D082B2D70750077AEAB /* RepoSearchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93110CFB2B2D70750077AEAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93110CE82B2D70710077AEAB /* RepoSearch */;
+			targetProxy = 93110CFA2B2D70750077AEAB /* PBXContainerItemProxy */;
+		};
+		93110D052B2D70750077AEAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93110CE82B2D70710077AEAB /* RepoSearch */;
+			targetProxy = 93110D042B2D70750077AEAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		93110D0B2B2D70750077AEAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93110D0C2B2D70750077AEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93110D0E2B2D70750077AEAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RepoSearch/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sama.RepoSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93110D0F2B2D70750077AEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RepoSearch/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sama.RepoSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		93110D112B2D70750077AEAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sama.RepoSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepoSearch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RepoSearch";
+			};
+			name = Debug;
+		};
+		93110D122B2D70750077AEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sama.RepoSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepoSearch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RepoSearch";
+			};
+			name = Release;
+		};
+		93110D142B2D70750077AEAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sama.RepoSearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RepoSearch;
+			};
+			name = Debug;
+		};
+		93110D152B2D70750077AEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sama.RepoSearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RepoSearch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93110CE42B2D70710077AEAB /* Build configuration list for PBXProject "RepoSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93110D0B2B2D70750077AEAB /* Debug */,
+				93110D0C2B2D70750077AEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93110D0D2B2D70750077AEAB /* Build configuration list for PBXNativeTarget "RepoSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93110D0E2B2D70750077AEAB /* Debug */,
+				93110D0F2B2D70750077AEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93110D102B2D70750077AEAB /* Build configuration list for PBXNativeTarget "RepoSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93110D112B2D70750077AEAB /* Debug */,
+				93110D122B2D70750077AEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93110D132B2D70750077AEAB /* Build configuration list for PBXNativeTarget "RepoSearchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93110D142B2D70750077AEAB /* Debug */,
+				93110D152B2D70750077AEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93110CE12B2D70710077AEAB /* Project object */;
+}
