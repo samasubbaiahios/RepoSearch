@@ -32,24 +32,24 @@ class RepoListViewModel: ObservableObject {
                                            requestContentType: .json,
                                            shouldIgnoreCacheData: true)
         let processor = NetworkService(RepoServiceInteractor())
-        processor.loadAPIRequest(publicRepoReq).sink { (completion) in
-            self.isListFetchingInProgress = false
-            switch completion {
-            case .failure(let error):
-                self.fetchedListOutput.send(.failure(error))
-                break
-                
-            case .finished:
-                break
-            }
-        } receiveValue: { result in
-            DispatchQueue.main.async {
+        processor.loadAPIRequest(publicRepoReq)
+            .receive(on: DispatchQueue.main) // Ensure UI updates run on the main thread
+            .sink { (completion) in
+                self.isListFetchingInProgress = false
+                switch completion {
+                case .failure(let error):
+                    self.fetchedListOutput.send(.failure(error))
+                    break
+                    
+                case .finished:
+                    break
+                }
+            } receiveValue: { result in
                 self.repositories = result
                 self.isListFetchingInProgress = false
                 self.fetchedListOutput.send(.success(result)) // Notifying data.
             }
-        }
-        .store(in: &cancellable)
+            .store(in: &cancellable)
     }
 
     /// Fetchs  Specific Language Repositories
@@ -62,26 +62,26 @@ class RepoListViewModel: ObservableObject {
         let publicRepoReq = NetworkRequest(resourcePath: languagePath.path,
                                            httpMethod: .get,
                                            queryParams: languagePath.parameters,
-                                 requestContentType: .json,
-                                 shouldIgnoreCacheData: true)
+                                           requestContentType: .json,
+                                           shouldIgnoreCacheData: true)
         let processor = NetworkService(LanguagesRepoServiceInteractor())
-        processor.loadAPIRequest(publicRepoReq).sink { (completion) in
-            self.isListFetchingInProgress = false
-            switch completion {
-            case .failure(let error):
-                self.fetchedListOutput.send(.failure(error))
-                break
-                
-            case .finished:
-                break
-            }
-        } receiveValue: { result in
-            DispatchQueue.main.async {
+        processor.loadAPIRequest(publicRepoReq)
+            .receive(on: DispatchQueue.main) // Ensure UI updates run on the main thread
+            .sink { (completion) in
+                self.isListFetchingInProgress = false
+                switch completion {
+                case .failure(let error):
+                    self.fetchedListOutput.send(.failure(error))
+                    break
+                    
+                case .finished:
+                    break
+                }
+            } receiveValue: { result in
                 self.repositories = result.items
                 self.isListFetchingInProgress = false
                 self.fetchedListOutput.send(.success(result.items)) // Notifying data.
             }
-        }
-        .store(in: &cancellable)
+            .store(in: &cancellable)
     }
 }

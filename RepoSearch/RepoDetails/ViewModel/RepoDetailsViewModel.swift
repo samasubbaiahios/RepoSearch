@@ -44,26 +44,26 @@ class RepoDetailsViewModel: ObservableObject {
                                            requestContentType: .json,
                                            shouldIgnoreCacheData: true)
         let processor = NetworkService(RepoContributorsServiceInteractor())
-        processor.loadAPIRequest(publicRepoReq).sink { (completion) in
-            self.isListFetchingInProgress = false
-            switch completion {
-            case .failure(let error):
-                self.usersListOutput.send(.failure(error))
-                break
-                
-            case .finished:
-                break
-            }
-        } receiveValue: { result in
-            DispatchQueue.main.async {
+        processor.loadAPIRequest(publicRepoReq)
+            .receive(on: DispatchQueue.main) // Ensure UI updates run on the main thread
+            .sink { (completion) in
+                self.isListFetchingInProgress = false
+                switch completion {
+                case .failure(let error):
+                    self.usersListOutput.send(.failure(error))
+                    break
+                    
+                case .finished:
+                    break
+                }
+            } receiveValue: { result in
                 let issuesResult = result.sorted { $0.contributions > $1.contributions }
                 let slicedResult = result.count > 3 ? Array(issuesResult.prefix(3)):result
                 self.contributors = slicedResult
                 self.isListFetchingInProgress = false
                 self.usersListOutput.send(.success(slicedResult)) // Notifying data.
             }
-        }
-        .store(in: &cancellable)
+            .store(in: &cancellable)
     }
 
     /// Fetchs Repositories Issues
@@ -81,28 +81,28 @@ class RepoDetailsViewModel: ObservableObject {
         let publicRepoReq = NetworkRequest(resourcePath: issuesPath.path,
                                            httpMethod: .get,
                                            queryParams: issuesPath.parameters,
-                                 requestContentType: .json,
-                                 shouldIgnoreCacheData: true)
+                                           requestContentType: .json,
+                                           shouldIgnoreCacheData: true)
         let processor = NetworkService(RepoIssuesListServiceInteractor())
-        processor.loadAPIRequest(publicRepoReq).sink { (completion) in
-            self.isListFetchingInProgress = false
-            switch completion {
-            case .failure(let error):
-                self.issuesListOutput.send(.failure(error))
-                break
-                
-            case .finished:
-                break
-            }
-        } receiveValue: { result in
-            DispatchQueue.main.async {
+        processor.loadAPIRequest(publicRepoReq)
+            .receive(on: DispatchQueue.main) // Ensure UI updates run on the main thread
+            .sink { (completion) in
+                self.isListFetchingInProgress = false
+                switch completion {
+                case .failure(let error):
+                    self.issuesListOutput.send(.failure(error))
+                    break
+                    
+                case .finished:
+                    break
+                }
+            } receiveValue: { result in
                 let issuesResult = result.sorted { $0.updatedAt ?? Date() > $1.updatedAt ?? Date() }
                 let slicedResult = result.count > 3 ? Array(issuesResult.prefix(3)):result
                 self.issues = slicedResult
                 self.isListFetchingInProgress = false
                 self.issuesListOutput.send(.success(slicedResult)) // Notifying data.
             }
-        }
-        .store(in: &cancellable)
+            .store(in: &cancellable)
     }
 }

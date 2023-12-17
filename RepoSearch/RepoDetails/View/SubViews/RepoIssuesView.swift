@@ -42,6 +42,7 @@ struct IssueView: View {
                     .font(.subheadline)
                     .foregroundColor(issueModel.state == "open" ? .red:.secondary)
                 SectionalView(sectionName: "Created: ", details: issueModel.createdAt?.toDateString() ?? "-")
+                    .padding(.vertical, 0)
                 SectionalView(sectionName: "Last Updated:", details: issueModel.updatedAt?.toDateString() ?? "-")
             }
             Spacer()
