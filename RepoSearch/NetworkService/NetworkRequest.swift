@@ -56,6 +56,6 @@ extension NetworkRequest {
             let resultComponents = queryParam.map { URLQueryItem(name: $0, value: $1) }
             components.queryItems = resultComponents
         }
-        return components.url!
+        return components.url
     }
 }

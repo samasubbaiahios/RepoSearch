@@ -20,13 +20,13 @@ enum RequestFactory {
         case .getAllPublicRepos:
             return "/repositories"
         case .getRepoFor(_):
-            return "search/repositories"
+            return "/search/repositories"
         case .getLanguageSpecificRepos(_):
-            return "search/repositories"
+            return "/search/repositories"
         case .getIssuesFor(let repo, let owner):
-            return "repos/\(owner)/\(repo)/issues"
+            return "/repos/\(owner)/\(repo)/issues"
         case .getContributors(let repo, let owner):
-            return "repos/\(owner)/\(repo)/contributors"
+            return "/repos/\(owner)/\(repo)/contributors"
         }
     }
     
@@ -52,7 +52,7 @@ enum RequestFactory {
         }
     }
     
-    var parameters: [String: Any]? {
+    var parameters: [String: String]? {
         switch self {
         case .getRepoFor(let topic):
             return ["q": topic]

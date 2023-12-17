@@ -43,7 +43,9 @@ class NetworkService<T: APIHandler> {
                                 promise(.failure(NetworkErrorTypes.Unknown))
                             }
                         }
-                    }, receiveValue: { promise(.success($0)) })
+                    }, receiveValue: {
+                        promise(.success($0))
+                    })
                     .store(in: &self.cancellable)
             }
             else {

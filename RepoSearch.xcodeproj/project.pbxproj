@@ -22,11 +22,26 @@
 		93110D272B2DEE290077AEAB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D262B2DEE290077AEAB /* NetworkService.swift */; };
 		93110D292B2DFEDD0077AEAB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D282B2DFEDD0077AEAB /* NetworkRequest.swift */; };
 		93110D2B2B2E05B90077AEAB /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D2A2B2E05B90077AEAB /* APIHandler.swift */; };
-		93110D2D2B2EA60F0077AEAB /* RequestProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D2C2B2EA60F0077AEAB /* RequestProcessor.swift */; };
+		93110D2D2B2EA60F0077AEAB /* RepoServiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D2C2B2EA60F0077AEAB /* RepoServiceInteractor.swift */; };
 		93110D2F2B2EA69D0077AEAB /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D2E2B2EA69D0077AEAB /* URLRequest+Extension.swift */; };
 		93110D312B2EAB110077AEAB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D302B2EAB110077AEAB /* Reachability.swift */; };
 		93110D332B2EC6910077AEAB /* IssuesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D322B2EC6910077AEAB /* IssuesModel.swift */; };
 		93110D352B2EC69E0077AEAB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D342B2EC69E0077AEAB /* UserModel.swift */; };
+		93110D3D2B2F06880077AEAB /* RepoContributorsServiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D3C2B2F06880077AEAB /* RepoContributorsServiceInteractor.swift */; };
+		93110D402B2F07490077AEAB /* RepoIssuesListServiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D3F2B2F07490077AEAB /* RepoIssuesListServiceInteractor.swift */; };
+		93110D422B2F07B90077AEAB /* RepoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D412B2F07B90077AEAB /* RepoDetailsViewModel.swift */; };
+		93110D452B2F19300077AEAB /* RepoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D442B2F19300077AEAB /* RepoListCell.swift */; };
+		93110D472B2F23F40077AEAB /* LanguagesRepoServiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D462B2F23F40077AEAB /* LanguagesRepoServiceInteractor.swift */; };
+		93110D492B2F3B400077AEAB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D482B2F3B400077AEAB /* AvatarView.swift */; };
+		93110D4B2B2F3B590077AEAB /* AvatarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D4A2B2F3B590077AEAB /* AvatarViewModel.swift */; };
+		93110D4D2B2F3F650077AEAB /* RepoDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D4C2B2F3F650077AEAB /* RepoDescriptionView.swift */; };
+		93110D532B2F4AC60077AEAB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D522B2F4AC60077AEAB /* String+Extension.swift */; };
+		93110D552B2F4CA70077AEAB /* RepoIssuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D542B2F4CA70077AEAB /* RepoIssuesView.swift */; };
+		93110D572B2F5A260077AEAB /* RepoDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D562B2F5A260077AEAB /* RepoDetailsViewModelTests.swift */; };
+		93110D592B2F643A0077AEAB /* RepoContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D582B2F643A0077AEAB /* RepoContributorsView.swift */; };
+		93110D5C2B2F6C700077AEAB /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D5B2B2F6C700077AEAB /* Formatter.swift */; };
+		93110D5E2B2F6DA60077AEAB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D5D2B2F6DA60077AEAB /* Date+Extension.swift */; };
+		93110D602B2F7FF00077AEAB /* RepoListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D5F2B2F7FF00077AEAB /* RepoListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,11 +80,26 @@
 		93110D262B2DEE290077AEAB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		93110D282B2DFEDD0077AEAB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		93110D2A2B2E05B90077AEAB /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		93110D2C2B2EA60F0077AEAB /* RequestProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProcessor.swift; sourceTree = "<group>"; };
+		93110D2C2B2EA60F0077AEAB /* RepoServiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoServiceInteractor.swift; sourceTree = "<group>"; };
 		93110D2E2B2EA69D0077AEAB /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
 		93110D302B2EAB110077AEAB /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		93110D322B2EC6910077AEAB /* IssuesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesModel.swift; sourceTree = "<group>"; };
 		93110D342B2EC69E0077AEAB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		93110D3C2B2F06880077AEAB /* RepoContributorsServiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoContributorsServiceInteractor.swift; sourceTree = "<group>"; };
+		93110D3F2B2F07490077AEAB /* RepoIssuesListServiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoIssuesListServiceInteractor.swift; sourceTree = "<group>"; };
+		93110D412B2F07B90077AEAB /* RepoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModel.swift; sourceTree = "<group>"; };
+		93110D442B2F19300077AEAB /* RepoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListCell.swift; sourceTree = "<group>"; };
+		93110D462B2F23F40077AEAB /* LanguagesRepoServiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesRepoServiceInteractor.swift; sourceTree = "<group>"; };
+		93110D482B2F3B400077AEAB /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		93110D4A2B2F3B590077AEAB /* AvatarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewModel.swift; sourceTree = "<group>"; };
+		93110D4C2B2F3F650077AEAB /* RepoDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDescriptionView.swift; sourceTree = "<group>"; };
+		93110D522B2F4AC60077AEAB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		93110D542B2F4CA70077AEAB /* RepoIssuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoIssuesView.swift; sourceTree = "<group>"; };
+		93110D562B2F5A260077AEAB /* RepoDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		93110D582B2F643A0077AEAB /* RepoContributorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoContributorsView.swift; sourceTree = "<group>"; };
+		93110D5B2B2F6C700077AEAB /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		93110D5D2B2F6DA60077AEAB /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		93110D5F2B2F7FF00077AEAB /* RepoListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,12 +150,12 @@
 		93110CEB2B2D70710077AEAB /* RepoSearch */ = {
 			isa = PBXGroup;
 			children = (
-				93110CEC2B2D70710077AEAB /* RepoSearchApp.swift */,
-				93110D1E2B2DEB6B0077AEAB /* View */,
-				93110D1F2B2DEB7E0077AEAB /* ViewModel */,
-				93110D202B2DEB8B0077AEAB /* Model */,
-				93110D362B2EC6EA0077AEAB /* CommonHelpers */,
+				93110D512B2F4AA50077AEAB /* Extension */,
 				93110D212B2DEB990077AEAB /* NetworkService */,
+				93110CEC2B2D70710077AEAB /* RepoSearchApp.swift */,
+				93110D382B2F05E20077AEAB /* RepoList */,
+				93110D3A2B2F06260077AEAB /* RepoDetails */,
+				93110D4E2B2F3F6C0077AEAB /* Avatar */,
 				93110CF22B2D70740077AEAB /* Preview Content */,
 				93110D172B2D8ECC0077AEAB /* Resources */,
 			);
@@ -144,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				93110CFD2B2D70750077AEAB /* RepoSearchTests.swift */,
+				93110D562B2F5A260077AEAB /* RepoDetailsViewModelTests.swift */,
+				93110D5F2B2F7FF00077AEAB /* RepoListViewModelTests.swift */,
 			);
 			path = RepoSearchTests;
 			sourceTree = "<group>";
@@ -169,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				93110CEE2B2D70710077AEAB /* RepoListView.swift */,
-				93110D1C2B2DA4970077AEAB /* RepoDetailsView.swift */,
+				93110D442B2F19300077AEAB /* RepoListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,7 +217,6 @@
 		93110D202B2DEB8B0077AEAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				93110D1A2B2DA4770077AEAB /* RepoModel.swift */,
 				93110D342B2EC69E0077AEAB /* UserModel.swift */,
 				93110D322B2EC6910077AEAB /* IssuesModel.swift */,
 			);
@@ -195,12 +226,12 @@
 		93110D212B2DEB990077AEAB /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				93110D362B2EC6EA0077AEAB /* CommonHelpers */,
 				93110D222B2DEC340077AEAB /* APIClient.swift */,
 				93110D2A2B2E05B90077AEAB /* APIHandler.swift */,
 				93110D282B2DFEDD0077AEAB /* NetworkRequest.swift */,
 				93110D242B2DECED0077AEAB /* RequestFactory.swift */,
 				93110D262B2DEE290077AEAB /* NetworkService.swift */,
-				93110D2C2B2EA60F0077AEAB /* RequestProcessor.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -208,10 +239,120 @@
 		93110D362B2EC6EA0077AEAB /* CommonHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				93110D2E2B2EA69D0077AEAB /* URLRequest+Extension.swift */,
 				93110D302B2EAB110077AEAB /* Reachability.swift */,
+				93110D5B2B2F6C700077AEAB /* Formatter.swift */,
 			);
 			path = CommonHelpers;
+			sourceTree = "<group>";
+		};
+		93110D372B2EF5910077AEAB /* ServiceInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				93110D2C2B2EA60F0077AEAB /* RepoServiceInteractor.swift */,
+				93110D462B2F23F40077AEAB /* LanguagesRepoServiceInteractor.swift */,
+			);
+			path = ServiceInteractor;
+			sourceTree = "<group>";
+		};
+		93110D382B2F05E20077AEAB /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				93110D1E2B2DEB6B0077AEAB /* View */,
+				93110D1F2B2DEB7E0077AEAB /* ViewModel */,
+				93110D392B2F05FF0077AEAB /* Model */,
+				93110D372B2EF5910077AEAB /* ServiceInteractor */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		93110D392B2F05FF0077AEAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93110D1A2B2DA4770077AEAB /* RepoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93110D3A2B2F06260077AEAB /* RepoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				93110D3B2B2F06390077AEAB /* View */,
+				93110D432B2F07BF0077AEAB /* ViewModel */,
+				93110D202B2DEB8B0077AEAB /* Model */,
+				93110D3E2B2F06910077AEAB /* ServiceInteractor */,
+			);
+			path = RepoDetails;
+			sourceTree = "<group>";
+		};
+		93110D3B2B2F06390077AEAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93110D1C2B2DA4970077AEAB /* RepoDetailsView.swift */,
+				93110D5A2B2F682B0077AEAB /* SubViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93110D3E2B2F06910077AEAB /* ServiceInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				93110D3C2B2F06880077AEAB /* RepoContributorsServiceInteractor.swift */,
+				93110D3F2B2F07490077AEAB /* RepoIssuesListServiceInteractor.swift */,
+			);
+			path = ServiceInteractor;
+			sourceTree = "<group>";
+		};
+		93110D432B2F07BF0077AEAB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				93110D412B2F07B90077AEAB /* RepoDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93110D4E2B2F3F6C0077AEAB /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				93110D4F2B2F3F790077AEAB /* View */,
+				93110D502B2F3F820077AEAB /* ViewModel */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		93110D4F2B2F3F790077AEAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93110D482B2F3B400077AEAB /* AvatarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93110D502B2F3F820077AEAB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				93110D4A2B2F3B590077AEAB /* AvatarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93110D512B2F4AA50077AEAB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				93110D2E2B2EA69D0077AEAB /* URLRequest+Extension.swift */,
+				93110D522B2F4AC60077AEAB /* String+Extension.swift */,
+				93110D5D2B2F6DA60077AEAB /* Date+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		93110D5A2B2F682B0077AEAB /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				93110D4C2B2F3F650077AEAB /* RepoDescriptionView.swift */,
+				93110D582B2F643A0077AEAB /* RepoContributorsView.swift */,
+				93110D542B2F4CA70077AEAB /* RepoIssuesView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,19 +486,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				93110D252B2DECED0077AEAB /* RequestFactory.swift in Sources */,
+				93110D422B2F07B90077AEAB /* RepoDetailsViewModel.swift in Sources */,
 				93110D2F2B2EA69D0077AEAB /* URLRequest+Extension.swift in Sources */,
+				93110D5C2B2F6C700077AEAB /* Formatter.swift in Sources */,
 				93110CEF2B2D70710077AEAB /* RepoListView.swift in Sources */,
+				93110D472B2F23F40077AEAB /* LanguagesRepoServiceInteractor.swift in Sources */,
 				93110D272B2DEE290077AEAB /* NetworkService.swift in Sources */,
 				93110D1B2B2DA4770077AEAB /* RepoModel.swift in Sources */,
+				93110D4B2B2F3B590077AEAB /* AvatarViewModel.swift in Sources */,
+				93110D402B2F07490077AEAB /* RepoIssuesListServiceInteractor.swift in Sources */,
 				93110CED2B2D70710077AEAB /* RepoSearchApp.swift in Sources */,
+				93110D452B2F19300077AEAB /* RepoListCell.swift in Sources */,
 				93110D192B2DA44C0077AEAB /* RepoListViewModel.swift in Sources */,
 				93110D1D2B2DA4970077AEAB /* RepoDetailsView.swift in Sources */,
-				93110D2D2B2EA60F0077AEAB /* RequestProcessor.swift in Sources */,
+				93110D2D2B2EA60F0077AEAB /* RepoServiceInteractor.swift in Sources */,
+				93110D3D2B2F06880077AEAB /* RepoContributorsServiceInteractor.swift in Sources */,
 				93110D2B2B2E05B90077AEAB /* APIHandler.swift in Sources */,
+				93110D532B2F4AC60077AEAB /* String+Extension.swift in Sources */,
 				93110D292B2DFEDD0077AEAB /* NetworkRequest.swift in Sources */,
+				93110D492B2F3B400077AEAB /* AvatarView.swift in Sources */,
 				93110D232B2DEC340077AEAB /* APIClient.swift in Sources */,
+				93110D592B2F643A0077AEAB /* RepoContributorsView.swift in Sources */,
 				93110D312B2EAB110077AEAB /* Reachability.swift in Sources */,
+				93110D552B2F4CA70077AEAB /* RepoIssuesView.swift in Sources */,
 				93110D352B2EC69E0077AEAB /* UserModel.swift in Sources */,
+				93110D5E2B2F6DA60077AEAB /* Date+Extension.swift in Sources */,
+				93110D4D2B2F3F650077AEAB /* RepoDescriptionView.swift in Sources */,
 				93110D332B2EC6910077AEAB /* IssuesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +521,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93110CFE2B2D70750077AEAB /* RepoSearchTests.swift in Sources */,
+				93110D572B2F5A260077AEAB /* RepoDetailsViewModelTests.swift in Sources */,
+				93110D602B2F7FF00077AEAB /* RepoListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - PublicRepos
-struct PublicRepos: Codable {
+// MARK: - LanguageRepos
+struct LanguageRepos: Codable {
     let totalCount: Int
     let items: [RepoModel]
     enum CodingKeys: String, CodingKey {
@@ -18,7 +18,7 @@ struct PublicRepos: Codable {
 }
 
 // MARK: - RepoModel
-struct RepoModel: Codable {
+struct RepoModel: Codable, Identifiable {
     let id, openIssues, watchers: Int
     var nodeID, name, fullName, description, url, visibility: String?
     let user: User?
@@ -36,6 +36,39 @@ struct RepoModel: Codable {
         case user = "owner"
     }
     
+    init(id: Int,
+         openIssues: Int = 0,
+         watchers: Int = 0,
+         nodeID: String?,
+         name: String?,
+         fullName: String?,
+         description: String?,
+         url: String?,
+         visibility: String?,
+         user: User?,
+         createdAt: Date?,
+         updatedAt: Date?,
+         pushedAt: Date?,
+         archived: Bool = false,
+         disabled: Bool = false
+    ) {
+        self.id = id
+        self.openIssues = openIssues
+        self.watchers = watchers
+        self.nodeID = nodeID
+        self.name = name
+        self.fullName = fullName
+        self.description = description
+        self.url = url
+        self.visibility = visibility
+        self.user = user
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
+        self.pushedAt = pushedAt
+        self.archived = archived
+        self.disabled = disabled
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
@@ -48,9 +81,12 @@ struct RepoModel: Codable {
         self.url = try? container.decode(String.self, forKey: .url)
         self.visibility = try? container.decodeIfPresent(String.self, forKey: .visibility)
         self.user = try container.decodeIfPresent(User.self, forKey: .user)
-        self.createdAt = try? container.decodeIfPresent(Date.self, forKey: .createdAt)
-        self.updatedAt = try? container.decodeIfPresent(Date.self, forKey: .updatedAt)
-        self.pushedAt = try? container.decodeIfPresent(Date.self, forKey: .pushedAt)
+        let createdAtStr = try? container.decode(String.self, forKey: .createdAt)
+        let updatedAtStr = try? container.decode(String.self, forKey: .updatedAt)
+        let pushedAtStr = try? container.decode(String.self, forKey: .pushedAt)
+        self.createdAt = CustomFormatter.dateFormatter.date(from: createdAtStr ?? "") ?? nil
+        self.updatedAt = CustomFormatter.dateFormatter.date(from: updatedAtStr ?? "") ?? nil
+        self.pushedAt = CustomFormatter.dateFormatter.date(from: pushedAtStr ?? "") ?? nil
         self.archived = try container.decodeIfPresent(Bool.self, forKey: .archived) ?? false
         self.disabled = try container.decodeIfPresent(Bool.self, forKey: .disabled) ?? false
     }
