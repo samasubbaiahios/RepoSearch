@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias APIHandler = RequestHandler & ResponseHandler
+
 enum NetworkErrorTypes: Error {
     case APIError
     case URLRequestFailed
@@ -26,4 +28,25 @@ protocol ResponseHandler {
     func parseResponse(_ data: Data, _ response: HTTPURLResponse?) throws -> ResponseDataType
 }
 
-typealias APIHandler = RequestHandler & ResponseHandler
+extension ResponseHandler {
+    
+    /// Decodes the response data to required entity object
+    /// - Parameters:
+    ///   - responseData: JSON Data
+    ///   - response: HTTPURLResponse
+    /// - Throws: APIError or ResponseError
+    /// - Returns: Decoded object
+    func defaultResponseParser<T:Codable>(_ responseData: Data?, _ response: HTTPURLResponse?) throws -> T {
+        if response?.statusCode == 401 {
+            throw NetworkErrorTypes.ResponseError
+        }
+        else {
+            guard let data = responseData, let statusCode = response?.statusCode, 200...299 ~= statusCode else {
+                throw NetworkErrorTypes.APIError
+            }
+            
+            let jsonDecoder = JSONDecoder()
+            return try jsonDecoder.decode(T.self, from: data)
+        }
+    }
+}

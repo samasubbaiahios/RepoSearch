@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct RepoListView: View {
-//    @ObservedObject var viewModel = RepoListViewModel()
+    @ObservedObject var viewModel = RepoListViewModel()
     var body: some View {
         NavigationView {
+            
             List {
 //                SearchBarView(placeholder: "Search movies", text: "")
 //                    .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
@@ -27,9 +28,7 @@ struct RepoListView: View {
 //                }
                 
             }
-            .onAppear {
-//                self.movieSearchState.startObserve()
-            }
+            .onAppear(perform: viewModel.fetchTopStories)
             .navigationBarTitle("Search")
         }
     }

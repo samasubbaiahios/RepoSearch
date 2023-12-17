@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import Combine
 
-class RepoListViewModel {
-//    private let networking: AppsService = AppsService.init()
-//    var appsInfo = [RepoModel]()
-    @Published private(set) var repositiries: [RepoModel] = []
+class RepoListViewModel: ObservableObject {
+
+    @Published private(set) var repositiries: [RepoModel]?
+    var fetchedListOutput: CurrentValueSubject<Result<[RepoModel], Error>, Never> = CurrentValueSubject<Result<[RepoModel], Error>, Never>(.success([]))
+    private var isListFetchingInProgress = false
+    private var cancellable = Set<AnyCancellable>()  // store the publishers
 
     public init() {}
 
@@ -19,18 +22,25 @@ class RepoListViewModel {
     /// - Parameters:
     ///    - completionHandler: returns Boolean
     func fetchTopStories() {
-//        let url = URL(string: "https://hacker-news.firebaseio.com/v0/beststories.json")!
-//        let request = APIRequest(url: url)
-//        request.perform { [weak self] (ids: [Int]?) -> Void in
-//            guard let ids = ids?.prefix(10) else { return }
-//            for (index, id) in ids.enumerated() {
-//                self?.fetchStory(withID: id) { story in
-//                    self?.stories[index] = story
-//                }
-//            }
-//        }
+        
+        let req = NetworkRequest(resourcePath: RequestFactory.getAllPublicRepos.path, httpMethod: .get, queryParams: nil, requestContentType: .json, shouldIgnoreCacheData: true)
+        let processor = NetworkService(RequestProcessor.shared)
+        processor.loadAPIRequest(req).sink { (completion) in
+            self.isListFetchingInProgress = false
+            switch completion {
+            case .failure(let error):
+                self.fetchedListOutput.send(.failure(error))
+                break
+                
+            case .finished:
+            break
+            }
+        } receiveValue: { result in
+            self.repositiries = result
+            self.isListFetchingInProgress = false
+            self.fetchedListOutput.send(.success(result)) // Notifying data.
+        }
+        .store(in: &cancellable)
     }
-
-
 
 }

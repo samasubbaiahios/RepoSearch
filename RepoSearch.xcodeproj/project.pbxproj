@@ -22,6 +22,11 @@
 		93110D272B2DEE290077AEAB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D262B2DEE290077AEAB /* NetworkService.swift */; };
 		93110D292B2DFEDD0077AEAB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D282B2DFEDD0077AEAB /* NetworkRequest.swift */; };
 		93110D2B2B2E05B90077AEAB /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D2A2B2E05B90077AEAB /* APIHandler.swift */; };
+		93110D2D2B2EA60F0077AEAB /* RequestProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D2C2B2EA60F0077AEAB /* RequestProcessor.swift */; };
+		93110D2F2B2EA69D0077AEAB /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D2E2B2EA69D0077AEAB /* URLRequest+Extension.swift */; };
+		93110D312B2EAB110077AEAB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D302B2EAB110077AEAB /* Reachability.swift */; };
+		93110D332B2EC6910077AEAB /* IssuesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D322B2EC6910077AEAB /* IssuesModel.swift */; };
+		93110D352B2EC69E0077AEAB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93110D342B2EC69E0077AEAB /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 		93110D262B2DEE290077AEAB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		93110D282B2DFEDD0077AEAB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		93110D2A2B2E05B90077AEAB /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		93110D2C2B2EA60F0077AEAB /* RequestProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProcessor.swift; sourceTree = "<group>"; };
+		93110D2E2B2EA69D0077AEAB /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
+		93110D302B2EAB110077AEAB /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		93110D322B2EC6910077AEAB /* IssuesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesModel.swift; sourceTree = "<group>"; };
+		93110D342B2EC69E0077AEAB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +120,12 @@
 		93110CEB2B2D70710077AEAB /* RepoSearch */ = {
 			isa = PBXGroup;
 			children = (
-				93110D212B2DEB990077AEAB /* NetworkService */,
 				93110CEC2B2D70710077AEAB /* RepoSearchApp.swift */,
 				93110D1E2B2DEB6B0077AEAB /* View */,
 				93110D1F2B2DEB7E0077AEAB /* ViewModel */,
 				93110D202B2DEB8B0077AEAB /* Model */,
+				93110D362B2EC6EA0077AEAB /* CommonHelpers */,
+				93110D212B2DEB990077AEAB /* NetworkService */,
 				93110CF22B2D70740077AEAB /* Preview Content */,
 				93110D172B2D8ECC0077AEAB /* Resources */,
 			);
@@ -175,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				93110D1A2B2DA4770077AEAB /* RepoModel.swift */,
+				93110D342B2EC69E0077AEAB /* UserModel.swift */,
+				93110D322B2EC6910077AEAB /* IssuesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,8 +200,18 @@
 				93110D282B2DFEDD0077AEAB /* NetworkRequest.swift */,
 				93110D242B2DECED0077AEAB /* RequestFactory.swift */,
 				93110D262B2DEE290077AEAB /* NetworkService.swift */,
+				93110D2C2B2EA60F0077AEAB /* RequestProcessor.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		93110D362B2EC6EA0077AEAB /* CommonHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				93110D2E2B2EA69D0077AEAB /* URLRequest+Extension.swift */,
+				93110D302B2EAB110077AEAB /* Reachability.swift */,
+			);
+			path = CommonHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,15 +345,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				93110D252B2DECED0077AEAB /* RequestFactory.swift in Sources */,
+				93110D2F2B2EA69D0077AEAB /* URLRequest+Extension.swift in Sources */,
 				93110CEF2B2D70710077AEAB /* RepoListView.swift in Sources */,
 				93110D272B2DEE290077AEAB /* NetworkService.swift in Sources */,
 				93110D1B2B2DA4770077AEAB /* RepoModel.swift in Sources */,
 				93110CED2B2D70710077AEAB /* RepoSearchApp.swift in Sources */,
 				93110D192B2DA44C0077AEAB /* RepoListViewModel.swift in Sources */,
 				93110D1D2B2DA4970077AEAB /* RepoDetailsView.swift in Sources */,
+				93110D2D2B2EA60F0077AEAB /* RequestProcessor.swift in Sources */,
 				93110D2B2B2E05B90077AEAB /* APIHandler.swift in Sources */,
 				93110D292B2DFEDD0077AEAB /* NetworkRequest.swift in Sources */,
 				93110D232B2DEC340077AEAB /* APIClient.swift in Sources */,
+				93110D312B2EAB110077AEAB /* Reachability.swift in Sources */,
+				93110D352B2EC69E0077AEAB /* UserModel.swift in Sources */,
+				93110D332B2EC6910077AEAB /* IssuesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
