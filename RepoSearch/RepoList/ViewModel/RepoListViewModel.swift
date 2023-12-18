@@ -15,6 +15,8 @@ class RepoListViewModel: ObservableObject {
 
     private var fetchedListOutput: CurrentValueSubject<Result<[RepoModel], Error>, Never> = CurrentValueSubject<Result<[RepoModel], Error>, Never>(.success([]))
     @Published private(set) var isListFetchingInProgress = false
+    @Published private(set) var error: Error?
+
     private var cancellable = Set<AnyCancellable>()  // store the publishers
 
     public init() {}
@@ -24,6 +26,13 @@ class RepoListViewModel: ObservableObject {
     /// - Parameters:
     ///    - completionHandler: returns Boolean
     func fetchPublicRepos() {
+        error = nil
+        if !Reachability.isConnectedToNetwork() {
+            self.isListFetchingInProgress = false
+            error = NetworkErrorTypes.noInternetConnection
+            self.fetchedListOutput.send(.failure(NetworkErrorTypes.noInternetConnection))
+        }
+        
         isListFetchingInProgress = true
         let request = RequestFactory.getAllPublicRepos
         let publicRepoReq = NetworkRequest(resourcePath: request.path,
@@ -57,6 +66,12 @@ class RepoListViewModel: ObservableObject {
     /// - Parameters:
     ///    - completionHandler: returns Boolean
     func fetchRepositories() {
+        error = nil
+        if !Reachability.isConnectedToNetwork() {
+            self.isListFetchingInProgress = false
+            error = NetworkErrorTypes.noInternetConnection
+            self.fetchedListOutput.send(.failure(NetworkErrorTypes.noInternetConnection))
+        }
         isListFetchingInProgress = true
         let languagePath = RequestFactory.getLanguageSpecificRepos(language: searchText)
         let publicRepoReq = NetworkRequest(resourcePath: languagePath.path,

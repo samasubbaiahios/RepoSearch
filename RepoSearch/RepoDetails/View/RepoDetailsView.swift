@@ -14,8 +14,12 @@ struct RepoDetailsView: View {
     var body: some View {
         List{
             RepoDescriptionView(repoDetail: viewModel.repoDetail)
-            RepoContributorsView(contributors: viewModel.contributors)
-            RepoIssuesView(issues: viewModel.issues)
+            if viewModel.contributors?.count ?? 0 > 0 {
+                RepoContributorsView(contributors: viewModel.contributors)
+            }
+            if viewModel.issues?.count ?? 0 > 0 {
+                RepoIssuesView(issues: viewModel.issues)
+            }
         }
         .overlay(content: {
             if viewModel.isListFetchingInProgress {
@@ -23,9 +27,8 @@ struct RepoDetailsView: View {
             }
         })
         .onAppear(perform: {
-            guard let repoDetail = viewModel.repoDetail else { return }
-            viewModel.fetchContributors(for: repoDetail)
-            viewModel.fetchRepositoryIssues(for: repoDetail)
+            viewModel.fetchContributors()
+            viewModel.fetchRepositoryIssues()
         })
         .navigationTitle(viewModel.repoDetail?.name ?? "|_|")
     }

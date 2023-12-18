@@ -13,14 +13,21 @@ struct RepoListView: View {
     var body: some View {
         NavigationView {
             List {
-                if let repos = self.viewModel.repositories {
-                    ForEach(repos, id: \.id) { repo in
-                        NavigationLink(destination: RepoDetailsView(viewModel: RepoDetailsViewModel(repo: repo))) {
-                            RepoCell(repoDetails: repo)
+                if let errorObj = self.viewModel.error {
+                    ErrorView.init(error: errorObj)
+                } else {
+                    if let repos = self.viewModel.repositories {
+                        ForEach(repos, id: \.id) { repo in
+                            NavigationLink(destination: RepoDetailsView(viewModel: RepoDetailsViewModel(repo: repo))) {
+                                RepoCell(repoDetails: repo)
+                            }
                         }
                     }
                 }
             }
+            .refreshable(action: {
+                viewModel.fetchPublicRepos()
+            })
             .listStyle(.plain)
             .onAppear(perform: viewModel.fetchPublicRepos)
             .navigationBarTitle("GitHub Repositories")
@@ -38,5 +45,19 @@ struct RepoListView: View {
             .onSubmit(of: .search) {
                 viewModel.fetchRepositories()
             }
+    }
+}
+
+struct ErrorView: View {
+    let error: Error
+    
+    var body: some View {
+        HStack {
+            Image("noInternet")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 64, height: 64)
+            Text(CustomFormatter.errorHandlers(error: error))
+        }
     }
 }

@@ -30,10 +30,10 @@ class RepoDetailsViewModel: ObservableObject {
     ///
     /// - Parameters:
     ///    - completionHandler: returns Boolean
-    func fetchContributors(for repo: RepoModel) {
+    func fetchContributors() {
         isListFetchingInProgress = true
-        guard let user = repo.user?.login,
-              let repoName = repo.name else {
+        guard let user = repoDetail?.user?.login,
+              let repoName = repoDetail?.name else {
             isListFetchingInProgress = false
             return
         }
@@ -70,10 +70,10 @@ class RepoDetailsViewModel: ObservableObject {
     ///
     /// - Parameters:
     ///    - completionHandler: returns Boolean
-    func fetchRepositoryIssues(for repo: RepoModel) {
+    func fetchRepositoryIssues() {
         isListFetchingInProgress = true
-        guard let user = repo.user?.login,
-              let repoName = repo.name else {
+        guard let user = repoDetail?.user?.login,
+              let repoName = repoDetail?.name else {
             isListFetchingInProgress = false
             return
         }
