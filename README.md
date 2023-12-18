@@ -1,1 +1,3 @@
 # RepoSearch
+
+This Sample code is fully build on SwiftUI+Combine, used MVVM Architecture. This is two page Application, which fetches data from GitHub API. By default it fetches all Public repositories, on user search with any programming languages it will get the required data. The details of any repository contains it description and top contributions and recent issues. Network requests are mentioned through an in-house API helper, error handlings has been added in main screen, as details screen is dependent on main screen selection. Reachable functionality has been added to handle network issues.
